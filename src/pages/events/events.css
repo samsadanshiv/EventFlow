@@ -1,0 +1,391 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #002efc;
+  --purple: #7c3aed;
+  --purple-light: #a78bfa;
+  --purple-dark: #5b21b6;
+  --green: #10b981;
+  --pink: #ec4899;
+  --bg: #ffffff;
+  --card-bg: #ffffff;
+  --text: #1a1230;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --tech-color: #7c3aed;
+  --cultural-color: #ec4899;
+  --sports-color: #10b981;
+  --radius: 18px;
+  --shadow: 0 4px 32px rgba(124, 58, 237, 0.08);
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  color: var(--text);
+  padding: 60px 20px 80px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Mesh background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 60% 40% at 15% 10%,
+      rgba(124, 58, 237, 0.07) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 85% 85%,
+      rgba(236, 72, 153, 0.06) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 70% 20%,
+      rgba(16, 185, 129, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 44px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.header h1 {
+  font-family: "Clash Display", sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.header h1 span {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Filter tabs */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  border-radius: 15px;
+  border: none;
+  background: rgb(228, 228, 228);
+  font-family: "Satoshi", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  opacity: 0;
+  transition: opacity 0.22s;
+}
+
+.filter-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.filter-btn:hover {
+  border-color: var(--purple-light);
+  color: var(--purple);
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  border-color: var(--purple);
+  color: white;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
+}
+
+.filter-btn.active::after {
+  opacity: 1;
+}
+
+/* Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.event-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s;
+  animation: fadeUp 0.5s ease both;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-card:hover {
+  transform: translateY(-100px) scale(1.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.event-card.hidden {
+  display: none;
+}
+
+/* Image area */
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.event-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.badge-tech {
+  background: var(--tech-color);
+}
+.badge-cultural {
+  background: var(--cultural-color);
+}
+
+.badge-sports {
+  background: var(--sports-color);
+}
+
+/* Card body */
+.card-body {
+  padding: 22px 22px 8px;
+  flex: 1;
+}
+
+.card-title {
+  font-family: "Clash Display", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.event-card:hover .card-title {
+  color: var(--purple-dark);
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.meta-item svg {
+  flex-shrink: 0;
+  color: var(--purple);
+}
+
+/* Progress bar */
+.progress-wrap {
+  padding: 0 22px 6px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  height: 6px;
+  border-radius: 100px;
+  background: #e9e5ff;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Register button */
+.card-footer {
+  padding: 14px 22px 22px;
+}
+
+.btn-register {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  color: white;
+  font-family: "Satoshi", sans-serif;
+  font-size: 0.97rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-register::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  opacity: 0;
+  transition: opacity 0.22s;
+}
+
+.btn-register:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+.btn-register:hover::before {
+  opacity: 1;
+}
+.btn-register span {
+  position: relative;
+  z-index: 1;
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  display: none;
+  grid-column: 1/-1;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger cards */
+.event-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.event-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.event-card:nth-child(3) {
+  animation-delay: 0.35s;
+}
+.event-card:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.event-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.event-card:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+@media (max-width: 600px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
