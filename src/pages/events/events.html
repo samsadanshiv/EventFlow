@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;700&family=Satoshi:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="header">
+        <h1>Upcoming <span>Events</span></h1>
+        <p>Don't miss out on these exciting events</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">
+          <span>All</span>
+        </button>
+        <button class="filter-btn" data-filter="tech"><span>Tech</span></button>
+        <button class="filter-btn" data-filter="cultural">
+          <span>Cultural</span>
+        </button>
+        <button class="filter-btn" data-filter="sports">
+          <span>Sports</span>
+        </button>
+      </div>
+
+      <div class="events-grid" id="eventsGrid">
+        <!-- Tech -->
+        <div class="event-card" data-category="tech">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80"
+              alt="TechSummit 2026"
+            />
+            <span class="card-badge badge-tech">Tech</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">TechSummit 2026</div>
+            <div class="card-desc">
+              Annual tech conference featuring industry leaders
+            </div>
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                March 15, 2026 • 10:00 AM
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Main Auditorium
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                342 / 500 registered
+              </div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Capacity</span><span>68%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 68%"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn-register"><span>Register Now</span></button>
+          </div>
+        </div>
+
+        <!-- Cultural -->
+        <div class="event-card" data-category="cultural">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80"
+              alt="Cultural Fest 2026"
+            />
+            <span class="card-badge badge-cultural">Cultural</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Cultural Fest 2026</div>
+            <div class="card-desc">
+              Celebrate diversity with music, dance, and art
+            </div>
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                March 20, 2026 • 5:00 PM
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                College Grounds
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                856 / 1000 registered
+              </div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Capacity</span><span>86%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 86%"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn-register"><span>Register Now</span></button>
+          </div>
+        </div>
+
+        <!-- Sports -->
+        <div class="event-card" data-category="sports">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1562552052-d9d21d91a4e4?w=600&q=80"
+              alt="Inter-College Sports Meet"
+            />
+            <span class="card-badge badge-sports">Sports</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Inter-College Sports Meet</div>
+            <div class="card-desc">
+              Annual sports championship with multiple events
+            </div>
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                March 25, 2026 • 8:00 AM
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Sports Complex
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                187 / 300 registered
+              </div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Capacity</span><span>62%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 62%"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn-register"><span>Register Now</span></button>
+          </div>
+        </div>
+
+        <!-- Tech 2 -->
+        <div class="event-card" data-category="tech">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80"
+              alt="AI & Innovation Expo"
+            />
+            <span class="card-badge badge-tech">Tech</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">HackNight 2026</div>
+            <div class="card-desc">
+              24-hour coding marathon with exciting prizes
+            </div>
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                April 5, 2026 • 6:00 PM
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Computer Lab
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                156 / 200 registered
+              </div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Capacity</span><span>53%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 53%"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn-register"><span>Register Now</span></button>
+          </div>
+        </div>
+
+        <!-- Cultural 2 -->
+        <div class="event-card" data-category="cultural">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&q=80"
+              alt="Art & Heritage Exhibition"
+            />
+            <span class="card-badge badge-cultural">Cultural</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Spring Music Fest</div>
+            <div class="card-desc">
+              Live performances by student bands and artists
+            </div>
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                April 10, 2026 • 7:00 PM
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Open Air Theatre
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                623 / 800 registered
+              </div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Capacity</span><span>72%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 72%"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn-register"><span>Register Now</span></button>
+          </div>
+        </div>
+
+        <!-- Sports 2 -->
+        <div class="event-card" data-category="sports">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&q=80"
+              alt="Marathon & Fun Run"
+            />
+            <span class="card-badge badge-sports">Sports</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Marathon & Fun Run</div>
+            <div class="card-desc">
+              5K and 10K races open to all students and faculty
+            </div>
+            <div class="card-meta">
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                April 18, 2026 • 6:30 AM
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Main Campus Track
+              </div>
+              <div class="meta-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                520 / 800 registered
+              </div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Capacity</span><span>65%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 65%"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn-register"><span>Register Now</span></button>
+          </div>
+        </div>
+
+        <div class="no-results" id="noResults">
+          No events found for this category.
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
