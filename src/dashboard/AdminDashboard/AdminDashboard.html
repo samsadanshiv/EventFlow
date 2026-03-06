@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EventFlow Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+<div class="logo-icon">E</div>
+<div>
+<h2>EventFlow</h2>
+<p>Admin</p>
+</div>
+</div>
+
+<ul class="menu">
+<li class="active">Dashboard</li>
+<li>Events</li>
+<li>Registrations</li>
+<li>Analytics</li>
+<li>Volunteers</li>
+<li>Settings</li>
+</ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<div>
+<h1>Admin Dashboard 🎯</h1>
+<p>Manage events, volunteers, and analytics</p>
+</div>
+
+<div class="topbar-right">
+
+<div class="icon-btn">
+<i class="fa-regular fa-moon"></i>
+</div>
+
+<div class="icon-btn notification">
+<i class="fa-regular fa-bell"></i>
+<span class="dot"></span>
+</div>
+
+<div class="profile">
+<i class="fa-regular fa-user"></i>
+</div>
+
+<button class="create-btn" onclick="showCreateEvent()">+ Create Event</button>
+
+</div>
+
+</div>
+
+<!-- CARDS -->
+
+<div class="cards">
+
+<div class="card">
+<p>Total Events</p>
+<h2>6</h2>
+</div>
+
+<div class="card">
+<p>Total Registrations</p>
+<h2>2262</h2>
+</div>
+
+<div class="card">
+<p>Active Students</p>
+<h2>5</h2>
+</div>
+
+<div class="card">
+<p>Avg Attendance</p>
+<h2>87%</h2>
+</div>
+
+</div>
+
+<!-- CREATE EVENT FORM -->
+
+<div id="createEventSection" class="create-event-section">
+
+<h2>Create New Event</h2>
+
+<div class="event-form">
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Event Title</label>
+<input type="text" placeholder="Enter event title">
+</div>
+
+<div class="form-group">
+<label>Category</label>
+<select>
+<option>Tech</option>
+<option>Cultural</option>
+<option>Sports</option>
+</select>
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Date</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label>Time</label>
+<input type="time">
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Location</label>
+<input type="text" placeholder="Event location">
+</div>
+
+<div class="form-group">
+<label>Capacity</label>
+<input type="number" placeholder="Maximum attendees">
+</div>
+
+</div>
+
+<div class="form-group">
+<label>Description</label>
+<textarea placeholder="Event description"></textarea>
+</div>
+
+<div class="form-buttons">
+
+<button class="cancel-btn" onclick="hideCreateEvent()">Cancel</button>
+<button class="create-btn">Create Event</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CHARTS -->
+
+<div class="charts">
+
+<div class="chart-card">
+<h3>Registration vs Capacity</h3>
+<canvas id="barChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Events by Category</h3>
+<canvas id="pieChart"></canvas>
+</div>
+
+</div>
+
+<!-- TABLE -->
+
+<div class="table-section">
+
+<h2>Registered Students</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Aarav Sharma</td>
+<td>aarav@college.edu</td>
+<td>+91 98765 43210</td>
+<td><span class="confirmed">Confirmed</span></td>
+</tr>
+
+<tr>
+<td>Priya Patel</td>
+<td>priya@college.edu</td>
+<td>+91 98765 43211</td>
+<td><span class="confirmed">Confirmed</span></td>
+</tr>
+
+<tr>
+<td>Rohan Kumar</td>
+<td>rohan@college.edu</td>
+<td>+91 98765 43212</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>Ananya Singh</td>
+<td>ananya@college.edu</td>
+<td>+91 98765 43213</td>
+<td><span class="confirmed">Confirmed</span></td>
+</tr>
+
+<tr>
+<td>Ishaan Verma</td>
+<td>ishaan@college.edu</td>
+<td>+91 98765 43214</td>
+<td><span class="confirmed">Confirmed</span></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
