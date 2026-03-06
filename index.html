@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EventFlow</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">
+<div class="logo-box">E</div>
+<span>EventFlow</span>
+</div>
+
+<ul class="nav-links">
+
+<li><a class="active">Home</a></li>
+<li><a>Events</a></li>
+<li><a>Features</a></li>
+<li><a>Contact</a></li>
+
+</ul>
+
+<div class="nav-right">
+
+<span class="dark-icon">☾</span>
+
+<button class="login-btn" onclick="openLogin()">Student Login</button>
+
+<button class="signup-btn" onclick="openSignup()">Sign Up</button>
+
+</div>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="badge">#1 College Event Platform</div>
+
+<h1>
+Manage College<br>
+Events <span class="gradient">Smarter</span><br>
+with EventFlow
+</h1>
+
+<p>
+Complete event lifecycle management from planning to feedback.
+Streamline registrations, manage volunteers, track attendance with QR
+codes, and analyze performance—all in one platform.
+</p>
+
+<div class="stats">
+
+<div>
+<h3>500+</h3>
+<p>Events Hosted</p>
+</div>
+
+<div>
+<h3>10K+</h3>
+<p>Active Students</p>
+</div>
+
+<div>
+<h3>98%</h3>
+<p>Satisfaction</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DASHBOARD CARD -->
+
+<div class="hero-right">
+
+<div class="dashboard">
+
+<h4>Dashboard</h4>
+
+<div class="dashboard-grid">
+
+<div class="card">
+<h3>1.2K</h3>
+<p>Students</p>
+</div>
+
+<div class="card">
+<h3>+23%</h3>
+<p>Growth</p>
+</div>
+
+<div class="card">
+<h3>4.8</h3>
+<p>Rating</p>
+</div>
+
+<div class="chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LOGIN POPUP -->
+
+<div id="loginPopup" class="popup">
+
+<div class="popup-box">
+
+<span class="close" onclick="closeForms()">×</span>
+
+<h2>Student Login</h2>
+
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+</div>
+
+</div>
+
+
+<!-- SIGNUP POPUP -->
+
+<div id="signupPopup" class="popup">
+
+<div class="popup-box">
+
+<span class="close" onclick="closeForms()">×</span>
+
+<h2>Create Account</h2>
+
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button>Sign Up</button>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
