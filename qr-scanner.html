@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EventFlow QR Code Scanner</title>
+
+<!-- QR Scanner Library -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#f5f7fb;
+}
+
+h1{
+    color:#1a73e8;
+}
+
+#reader{
+    width:320px;
+    margin:auto;
+}
+
+#result{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:green;
+}
+
+.container{
+    margin-top:50px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>EventFlow QR Scanner</h1>
+<p>Scan student event ticket</p>
+
+<div id="reader"></div>
+
+<p id="result">Waiting for scan...</p>
+
+</div>
+
+<script>
+
+function onScanSuccess(decodedText, decodedResult) {
+
+    document.getElementById("result").innerHTML =
+    "Student Ticket Data: <br>" + decodedText;
+
+    console.log(`QR Code detected: ${decodedText}`);
+}
+
+function onScanError(error) {
+    console.warn(`QR error = ${error}`);
+}
+
+let html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader",
+    {
+        fps:10,
+        qrbox:250
+    });
+
+html5QrcodeScanner.render(onScanSuccess,onScanError);
+
+</script>
+
+</body>
+</html>
