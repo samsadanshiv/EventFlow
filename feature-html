@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EventFlow Features</title>
+<link rel="stylesheet" href="features.css">
+</head>
+
+<body>
+
+<header>
+<h1>EventFlow Features</h1>
+<p>Discover what makes our platform powerful for event management</p>
+</header>
+
+<section class="features">
+
+<div class="card">
+<h2>📅 Event Discovery</h2>
+<p>Find upcoming events, seminars and workshops easily with smart search and filters.</p>
+<button onclick="showFeature('event')">Learn More</button>
+</div>
+
+<div class="card">
+<h2>📝 Easy Registration</h2>
+<p>Register for events quickly with a simple RSVP and ticket booking system.</p>
+<button onclick="showFeature('register')">Learn More</button>
+</div>
+
+<div class="card">
+<h2>👤 Student Profile</h2>
+<p>Manage your personal profile, view registered events and update information.</p>
+<button onclick="showFeature('profile')">Learn More</button>
+</div>
+
+<div class="card">
+<h2>🔔 Notifications</h2>
+<p>Receive reminders and updates about events you registered for.</p>
+<button onclick="showFeature('notify')">Learn More</button>
+</div>
+
+<div class="card">
+<h2>📊 Dashboard</h2>
+<p>Track your activities, upcoming events and event history in one place.</p>
+<button onclick="showFeature('dashboard')">Learn More</button>
+</div>
+
+</section>
+
+<div id="infoBox"></div>
+
+<script src="features.js"></script>
+
+</body>
+</html>

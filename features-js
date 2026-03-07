@@ -1,0 +1,27 @@
+function showFeature(type){
+
+let text="";
+
+if(type=="event"){
+text="Browse all upcoming events with categories and filters.";
+}
+
+else if(type=="register"){
+text="Register instantly and secure your seat in the event.";
+}
+
+else if(type=="profile"){
+text="Edit your profile and view all registered events.";
+}
+
+else if(type=="notify"){
+text="Get notifications about schedule changes and reminders.";
+}
+
+else if(type=="dashboard"){
+text="View statistics and track your participation.";
+}
+
+document.getElementById("infoBox").innerText=text;
+
+}
