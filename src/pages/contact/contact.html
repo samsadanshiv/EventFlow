@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventFlow - Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#home" class="logo-section">
+                <div class="logo-box">E</div>
+                <div class="brand-name">EventFlow</div>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#events">Events</a>
+                <a href="#features">Features</a>
+                <a href="#contact" class="active">Contact</a>
+            </nav>
+            <div class="header-right">
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#login" class="student-login">Student Login</a>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h1 class="section-title">Get in Touch</h1>
+            <p class="section-subtitle">Have questions? We'd love to hear from you</p>
+        </div>
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Your Name</label>
+                        <input class="form-input" type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Message
+                </button>
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Your message has been sent successfully! We'll get back to you soon.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-box">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Events?</h2>
+                <p class="cta-subtitle">Join thousands of students and organizers using EventFlow</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn-primary">Get Started Free</button>
+                    <button class="cta-btn-secondary">Explore Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="footer-logo-box">E</div>
+                        <div class="footer-logo-text">EventFlow</div>
+                    </div>
+                    <p>Streamlining college event management with smart technology and seamless experiences.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="#events"><i class="fas fa-calendar"></i>Events</a></li>
+                        <li><a href="#features"><i class="fas fa-star"></i>Features</a></li>
+                        <li><a href="#portal"><i class="fas fa-user-circle"></i>Student Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="mailto:info@eventflow.edu"><i class="fas fa-envelope"></i>info@eventflow.edu</a></li>
+                        <li><a href="tel:+919876543210"><i class="fas fa-phone"></i>+91 98765 43210</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>College Campus, City</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#facebook" class="social-icon" aria-label="Facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#twitter" class="social-icon" aria-label="Twitter" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#instagram" class="social-icon" aria-label="Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#linkedin" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 EventFlow. All rights reserved. | Built with <i class="fas fa-heart" style="color: #FF6B6B;"></i> for college events</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
